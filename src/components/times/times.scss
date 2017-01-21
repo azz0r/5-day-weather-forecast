@@ -1,21 +1,26 @@
-.time {
-  margin-bottom: 1rem;
+.times {
+  .time {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
 
-  &__time {
-    display: block;
-    font-size: 1.4rem;
-    font-weight: 500;
-  }
+    &__time {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
 
-  &__main {
-    display: block;
-  }
+    &__main {
+    }
 
-  &__description {
-    text-transform: capitalize;
-  }
+    &__description {
+      text-transform: capitalize;
+    }
 
-  &:last-of-type hr {
-    display: none;
+    &__icon {
+      .icon {
+        font-size: 3rem;
+      }
+    }
   }
 }
