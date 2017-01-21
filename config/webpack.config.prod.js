@@ -31,7 +31,7 @@ const prodConfig = Object.assign({}, defaultConfig, {
     app: path.join(paths.appSrc, 'main'),
   },
   output: {
-    publicPath: "/",
+    publicPath: "",
     path: paths.appBuild,
     filename: "[name]-[hash:8].bundle.js",
     chunkFilename: "[id]-[hash:8].chunk.js",
