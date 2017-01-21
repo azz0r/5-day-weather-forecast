@@ -3,9 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const defaultConfig = require('./webpack.common')
 const path = require('path')
-const constants = require('../src/constants')
 const paths = require('./paths')
-const ManifestPlugin = require('webpack-manifest-plugin')
 
 const HTMLMinifier = {
   removeComments: true,
@@ -29,18 +27,11 @@ const prodConfig = Object.assign({}, defaultConfig, {
     vendors: [
       'react',
       'react-dom',
-      'react-helmet',
-      'react-router',
-      'redux',
-      'react-redux',
-      'react-sticky',
-      'moment',
     ],
-    polyfill: require.resolve('./polyfills'),
-    app: path.join(paths.appSrc, 'index'),
+    app: path.join(paths.appSrc, 'main'),
   },
   output: {
-    publicPath: constants.baseUrl,
+    publicPath: "/",
     path: paths.appBuild,
     filename: "static/[name]-[hash:8].bundle.js",
     chunkFilename: "static/[id]-[hash:8].chunk.js",

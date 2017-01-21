@@ -15,11 +15,8 @@ const devConfig = Object.assign({}, defaultConfig, {
     historyApiFallback: true,
   },
   entry: [
-    'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    require.resolve('./polyfills'),
-    path.join(paths.appSrc, 'index'),
+    path.join(paths.appSrc, 'main'),
   ],
   watch: true,
   progress: true,

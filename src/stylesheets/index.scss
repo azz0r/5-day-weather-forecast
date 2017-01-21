@@ -1,0 +1,53 @@
+@import "animation";
+@import "days";
+
+body {
+  animation: rollingDay 20s ease-out infinite;
+  border: 0;
+  font-family: "Roboto Slab", "Verdana", sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 2rem 0;
+  padding: 0 0 0 2rem;
+  text-align: left;
+  text-shadow: 1px 1px black;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+// react requires a parent div so we have to set that
+// and the main element to 100% for flex justify content to work
+html,
+body,
+#container,
+#container > div,
+.weather {
+  height: 100%;
+}
+
+.separator {
+  background-image: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0);
+  border: 0;
+  height: 1px;
+  margin-top: 1rem;
+}
+
+.fa-cloud {
+  color: #9cadda;
+}
+
+.fa-cloud.clear {
+  color: white;
+  text-shadow: 0 0 2px black;
+}

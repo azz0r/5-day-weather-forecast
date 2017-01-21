@@ -1,54 +1,13 @@
-#Universe SIM Manager
+* Build: `npm run build`
+* Watch files continuously, rebuild whenever one of them changes: `npm run watch`
+* Hot reloading via webpack dev server: `npm start`
 
-[![CircleCI](https://circleci.com/gh/azz0r/wwe-draft-generator.svg?style=svg)](https://circleci.com/gh/azz0r/wwe-draft-generator)
+http://localhost:8080/
 
-### [View a demo here](https://www.wwesim.com)
+es6 js
+babel, node
+tests with karma mocha chai enzyme
+spa: 5 day weather forecast for a location
 
-## 📕 Index
-* [Installing](#installing)
-* [Features](#features)
-* [Launching](#launching)
-* [Testing](#testing)
-
-### 💪 <a name="installing"> Installing</a>
-```
-npm cache clean;
-npm install
-npm run start;
-```
-or
-```
-yarn
-```
-
-
-### Features
-* PPV, moves, wrestlers, brands, shows, championships collections
-* Create a show
-* Drag and drop wrestlers onto relevant targets (championships, matches, brands)
-* Select who wins a match
-
-### 🚀 <a name="launching">Launching</a>
-* Development ```npm run start```
-* Build  ```npm run build```
-* Test  ```npm run test```
-* Test with Coverage report ```npm run test:coverage```
-
-###  📚 <a name="testing">Testing</a>
-Powered by Mocha, Chai, Enzyme, Sinon.
-
-* Run unit tests ```npm run test```
-
-Tests are written by creating .spec files under a __tests__ directory.
-
-## ✨ <a name="features">Features</a>
-* Hot reloading (v3)
-* Static compile
-* Bundle per route
-* SASS compiling with hot reload
-* Per component SASS
-* Webpack dev & production configs inherit from a common config
-* Mocha, Chai & Enzyme testing
-* Redux
-* React Router 3.0
-* Stage 0, ES6
+OpenWeatherMap 5 day weather forecast API: http://openweathermap.org/forecast5
+Readable but with no need to go all out on sleek and flashy UI elements.

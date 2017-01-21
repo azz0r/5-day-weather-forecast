@@ -5,14 +5,13 @@ function resolveApp(relativePath) {
 }
 
 module.exports = {
+  appSrc: resolveApp('src'),
   appBuild: resolveApp('build'),
-  appHtml: resolveApp('index.html'),
-  appImgs: resolveApp('src/imgs'),
+  appImgs: resolveApp('src/public/imgs'),
   appPublic: resolveApp('src/public'),
-  appSprites: resolveApp('src/imgs/sprites'),
+  appHtml: resolveApp('src/public/index.html'),
   appStylesheets: resolveApp('src/stylesheets'),
   appPackageJson: resolveApp('package.json'),
-  appSrc: resolveApp('src'),
   appNodeModules: resolveApp('node_modules'),
   ownNodeModules: resolveApp('node_modules'),
 }

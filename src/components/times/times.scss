@@ -1,0 +1,21 @@
+.time {
+  margin-bottom: 1rem;
+
+  &__time {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &__main {
+    display: block;
+  }
+
+  &__description {
+    text-transform: capitalize;
+  }
+
+  &:last-of-type hr {
+    display: none;
+  }
+}
