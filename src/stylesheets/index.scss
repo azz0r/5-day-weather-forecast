@@ -5,7 +5,8 @@ body {
   border: 0;
   font-family: "Roboto Slab", "Verdana", sans-serif;
   height: 100%;
-  margin: 0 1rem;
+  margin: 0;
+  font-size: 60%;
 }
 
 h1 {
@@ -14,7 +15,7 @@ h1 {
   margin: 2rem 0;
   padding: 0;
   text-align: center;
-  text-shadow: 1px 1px black;
+  text-shadow: 1px 1px #000000;
 }
 
 ul {
@@ -34,25 +35,8 @@ body,
   height: 100%;
 }
 
-.separator {
-  background-image: linear-gradient(to right, #f0f0f0, #ccc, #f0f0f0);
-  border: 0;
-  height: 1px;
-  margin-top: 1rem;
-}
-
-.fa-cloud {
-  color: #9cadda;
-}
-
-.fa-cloud.clear {
-  color: white;
-  text-shadow: 0 0 2px black;
-}
-
-
 // desktop changes
-@media (min-width: 800px) {
+@media (min-width: 850px) {
   h1 {
     margin: 2rem;
     text-align: left;
