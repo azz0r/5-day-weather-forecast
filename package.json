@@ -1,4 +1,15 @@
 {
+  "scripts": {
+    "start": "NODE_ENV=development DEBUG=app:* babel-node ./scripts/start.js",
+    "build": "NODE_ENV=production DEBUG=app:* babel-node ./scripts/build.js",
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register -r test/*.spec.js",
+    "deploy": "gh-pages-deploy",
+  },
+  "gh-pages-deploy": {
+    "staticpath": "build",
+    "noprompt": true
+  },
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.4.5",
     "babel-eslint": "^7.1.1",
@@ -19,11 +30,6 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.12.1"
-  },
-  "scripts": {
-    "start": "NODE_ENV=development DEBUG=app:* babel-node ./scripts/start.js",
-    "build": "NODE_ENV=production DEBUG=app:* babel-node ./scripts/build.js",
-    "test": "NODE_ENV=test mocha --compilers js:babel-core/register -r test/*.spec.js"
   },
   "dependencies": {
     "chai": "^3.5.0",
