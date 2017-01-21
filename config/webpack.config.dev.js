@@ -34,7 +34,12 @@ devConfig.plugins.push(
 devConfig.module.loaders.push(
   {
     test: /\.scss$/,
-    loaders: ["style", "css", "postcss", "sass"]
+    loaders: [
+      "style",
+      "css",
+      "postcss",
+      "sass",
+    ],
   }
 )
 log('Webpack dev config finished')
