@@ -1,6 +1,7 @@
 import "./stylesheets/index.scss"
 import { City } from "./components/city/city"
 import { Days } from "./components/days/days"
+import { Footer } from "./components/footer/footer"
 import { fetchJSON } from "./helpers/fetchJSON"
 import React from "react"
 import ReactDOM from "react-dom"
@@ -49,16 +50,19 @@ class App extends React.Component {
   render() {
     const loadingClass = (this.state.loading) ? "loading" : "inactive"
     return (
-      <main className={`weather ${loadingClass}`}>
-        <If condition={this.state.city.name}>
-          <City name={this.state.city.name} country={this.state.city.country} />
-          <Days
-            days={this.state.days}
-            timeSettings={Settings.defaultTimeSettings}
-            dateSettings={Settings.defaultDateSettings}
-          />
-        </If>
-      </main>
+      <div>
+        <main className={`weather ${loadingClass}`}>
+          <If condition={this.state.city.name}>
+            <City name={this.state.city.name} country={this.state.city.country} />
+            <Days
+              days={this.state.days}
+              timeSettings={Settings.defaultTimeSettings}
+              dateSettings={Settings.defaultDateSettings}
+            />
+          </If>
+        </main>
+        <Footer />
+      </div>
     )
   }
 }
