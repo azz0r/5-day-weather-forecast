@@ -19,7 +19,7 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: paths.appPublic,
-        to: paths.appBuild,
+        to: "/",
       },
     ]),
     new webpack.NoErrorsPlugin(),
