@@ -1,11 +1,17 @@
+$background-color: #fff;
+$color: #000;
+
 .footer {
-  background-color: #fff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  background-color: $background-color;
+  box-shadow: 0 .1rem .4rem rgba(0, 0, 0, .3), 0 0 4rem rgba(0, 0, 0, .1) inset;
   font-size: 1rem;
-  margin: 1rem 0 0;
-  opacity: .9;
-  padding: 1rem;
+  margin: 2rem 0 0;
+  padding: .5rem;
   position: relative;
   text-align: center;
-  width: 100%;
+
+  a {
+    color: $color;
+    text-decoration: underline;
+  }
 }
