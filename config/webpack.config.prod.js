@@ -11,7 +11,6 @@ const HTMLMinifier = {
   removeCDATASectionsFromCDATA: true,
   collapseWhitespace: true,
   collapseBooleanAttributes: true,
-  removeAttributeQuotes: true,
   removeRedundantAttributes: true,
   useShortDoctype: true,
   removeEmptyAttributes: true,
@@ -43,6 +42,7 @@ const pluginPush = (data) => {
     data
   )
 }
+
 pluginPush(
   new webpack.optimize.UglifyJsPlugin({
     sourceMap: false,
@@ -53,20 +53,18 @@ pluginPush(
     },
   })
 )
-// pluginPush(
-//   new ManifestPlugin({
-//     fileName: 'asset-manifest.json',
-//   })
-// )
+
 pluginPush(
   new ExtractTextPlugin('[name].css')
 )
+
 pluginPush(
   new HtmlWebpackPlugin({
     template: paths.appHtml,
     minify: HTMLMinifier,
   })
 )
+
 prodConfig.module.loaders.push(
   {
     test: /\.scss$/,
@@ -77,4 +75,5 @@ prodConfig.module.loaders.push(
       ),
   }
 )
+
 module.exports = prodConfig
