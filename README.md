@@ -1,6 +1,8 @@
 # 5 Day Weather forecast
 
-## 📕 Index
+## [View a demo here](https://azz0r.github.io/5-day-weather-forecast/)
+
+### 📕 Index
 * [Installing](#installing)
 * [Features](#features)
 * [Launching](#launching)
