@@ -1,6 +1,6 @@
 # 5 Day Weather forecast
 
-## [View a demo here](https://azz0r.github.io/5-day-weather-forecast/)
+## [View a demo here](http://5-day-weather-forecast.aaronlote.com/) or [here](https://azz0r.github.io/5-day-weather-forecast/)
 
 ### 📕 Index
 * [Installing](#installing)
