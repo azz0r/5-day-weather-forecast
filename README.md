@@ -38,3 +38,9 @@ Powered by Mocha, Chai, Enzyme, Sinon.
 ## Notes
  * API: OpenWeatherMap 5 Days: http://openweathermap.org/forecast5
  * The free version of the openweathermap API does not support SSL and github pages only supports HTTPS - therefore you will need to click the shield for this work
+
+## TODO
+ * Fix tests, time was short
+ * Strip back the imported react framework, its overkill in places
+ * Error handling in fetchJSON
+ * Error handling when the API doesn't work (e.g. load unsafe scripts work around)
