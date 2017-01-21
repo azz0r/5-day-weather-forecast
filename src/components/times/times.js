@@ -34,10 +34,10 @@ export const Times = ({
 
             <span className="time__main">
               {time.main}
-            </span>
-
-            <span className="time__description">
-              {time.description}
+              <br />
+              <span className="time__description">
+                {time.description}
+              </span>
             </span>
 
             <span className="time__icon">
