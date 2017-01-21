@@ -1,27 +1,26 @@
-.times {
-  .time {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
+.time {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
 
-    &__time {
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
+  &__time {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
 
-    &__main {
-    }
+  &__main {
+  }
 
-    &__description {
-      text-transform: capitalize;
-    }
+  &__description {
+    text-transform: capitalize;
+  }
 
-    &__icon {
-      margin-left: 0;
-      .icon {
-        font-size: 3rem;
-      }
+  &__icon {
+    margin-left: 0;
+
+    .icon {
+      font-size: 3rem;
     }
   }
 }
