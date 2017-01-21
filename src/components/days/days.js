@@ -1,5 +1,6 @@
-import React from "react"
+import "./days.scss"
 import { Times } from "../times/times"
+import React from "react"
 
 export const Days = ({
   days = [],
