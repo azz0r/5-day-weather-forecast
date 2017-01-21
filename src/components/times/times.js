@@ -1,6 +1,22 @@
 import "./times.scss"
 import React from "react"
-
+const getWeatherIcon = (main) => {
+  let icon = ""
+  switch (main) {
+    case "Clouds":
+      icon = "fa-cloud"
+      break
+    case "Clear":
+      icon = "fa-cloud clear"
+      break
+    case "Rain":
+      icon = "fa-umbrella"
+      break
+    default:
+      break
+  }
+  return icon
+}
 export const Times = ({
   times = [],
   timeSettings = {},
@@ -8,33 +24,29 @@ export const Times = ({
   return (
     <section className="times">
       {times.map((time, key) =>
-        <div key={key}
-          className="time">
-          <span className="time__time">
-            {time.dateTime.toLocaleTimeString([], timeSettings)}
-          </span>
-          <span className="time__main">
-            {time.main}&nbsp;
-            <Choose>
-              <When condition={time.main === "Clouds"}>
-                <span className="icon fa fa-cloud"></span>
-              </When>
-              <When condition={time.main === "Clear"}>
-                <span className="icon clear fa fa-cloud"></span>
-              </When>
-              <When condition={time.main === "Rain"}>
-                <span className="icon clear fa fa-umbrella"></span>
-              </When>
-              <Otherwise>
-              </Otherwise>
-            </Choose>
-          </span>
-          <span className="time__description">
-            {time.description}
-          </span>
-          <div>
-            <hr className="separator" />
+        <div>
+          <div key={key}
+            className="time">
+
+            <span className="time__time">
+              {time.dateTime.toLocaleTimeString([], timeSettings)}
+            </span>
+
+            <span className="time__main">
+              {time.main}
+            </span>
+
+            <span className="time__description">
+              {time.description}
+            </span>
+
+            <span className="time__icon">
+              <span className={`icon fa ${getWeatherIcon(time.main)}`}></span>
+            </span>
           </div>
+          <If condition={times.length !== key + 1}>
+            <hr className="separator" />
+          </If>
         </div>
       )}
     </section>
