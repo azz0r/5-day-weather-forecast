@@ -53,7 +53,10 @@ class App extends React.Component {
       <div>
         <main className={`weather ${loadingClass}`}>
           <If condition={this.state.city.name}>
-            <City name={this.state.city.name} country={this.state.city.country} />
+            <City
+              name={this.state.city.name}
+              country={this.state.city.country}
+            />
             <Days
               days={this.state.days}
               timeSettings={Settings.defaultTimeSettings}
