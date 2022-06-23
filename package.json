@@ -39,7 +39,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "filesize": "^3.4.1",
     "gzip-size": "^3.0.0",
-    "jsdom": "^9.9.1",
+    "jsdom": "^16.5.0",
     "jsdom-global": "^2.1.1",
     "json-loader": "^0.5.4",
     "jsx-control-statements": "^3.1.5",
